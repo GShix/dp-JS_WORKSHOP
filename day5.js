@@ -92,3 +92,31 @@ const total= cartItems.reduce((acc,curr)=>{
     return acc
 },{totalPrice:0,totalQuantity:0})
 // console.log(total)
+
+const people = [
+    {
+        name:"Hari", age:23
+    },
+    {
+        name:"Dolma", age:17
+    },
+    {
+        name:"Manish", age:21
+    },
+    {
+        name:"Dambar", age:20
+    },
+    {
+        name:"Hima", age:17
+    }
+]
+const groupData = people.reduce((acc,person)=>{
+    const age = person.age;
+    if(!acc[age]){
+        acc[age]=[]
+    }
+    acc[age].push(person)
+    return acc
+},{})
+
+console.log(groupData)
